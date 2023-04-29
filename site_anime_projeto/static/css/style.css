@@ -52,7 +52,6 @@
     height: 100px;
 }
 
-<<<<<<< HEAD
 .decoration {
     display: block;
     width: 100%;
@@ -61,13 +60,11 @@
     margin-top: 20px;
     margin-bottom: 20px;
 }
-=======
 .nav-menu li:hover {
     color: blue;
 }
 
 
->>>>>>> navbar
 
 .main-animes {
     padding: 200px 85px 30px 30px;
