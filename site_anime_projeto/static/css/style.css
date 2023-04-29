@@ -1,0 +1,60 @@
+#header-color {
+    
+}
+
+
+.title {
+    text-align: center;
+    border: solid;
+    border-radius: 10px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    margin-bottom: 20px;
+}
+
+.bg-top {
+    border: solid;
+}
+
+#bg {
+    width: 100%;
+}
+
+.logo-box {
+    display: inline-block;
+}
+
+.logo-left {
+    border: solid;
+    width: 250px;
+    height: 300px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.nav-menu {
+    border: solid;
+    display: inline-block;
+    position: absolute; right: 10px;
+    margin-right: 100px;
+}
+
+.nav-menu ul {
+    text-align: right;
+    
+}
+
+.nav-menu li {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px;
+    color: black;
+    position: relative;
+    
+}
+
+.nav-menu li:hover {
+    color: blue;
+}
+
+
+

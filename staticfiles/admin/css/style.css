@@ -1,0 +1,11 @@
+h1 {
+    text-align: center;
+    border: solid;
+    color: aqua;
+}
+
+.logo-left {
+    display: inline-block;
+    border: solid;
+    width: auto;
+}
