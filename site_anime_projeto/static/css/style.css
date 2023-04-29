@@ -1,14 +1,22 @@
-.header {
-    background-color: hsl(180, 76%, 44%);
+#header-color {
+    
 }
+
 
 .title {
     text-align: center;
     border: solid;
-    margin: 30px;
     border-radius: 10px;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
-    
+    margin-bottom: 20px;
+}
+
+.bg-top {
+    border: solid;
+}
+
+#bg {
+    width: 100%;
 }
 
 .logo-box {
@@ -44,6 +52,7 @@
     height: 100px;
 }
 
+<<<<<<< HEAD
 .decoration {
     display: block;
     width: 100%;
@@ -52,6 +61,13 @@
     margin-top: 20px;
     margin-bottom: 20px;
 }
+=======
+.nav-menu li:hover {
+    color: blue;
+}
+
+
+>>>>>>> navbar
 
 .main-animes {
     padding: 200px 85px 30px 30px;
