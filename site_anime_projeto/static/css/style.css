@@ -41,7 +41,38 @@
     padding: 15px;
     color: black;
     position: relative;
-    
+    height: 100px;
 }
 
+.decoration {
+    display: block;
+    width: 100%;
+    height: 220px;
+    border: solid;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
+.main-animes {
+    padding: 200px 85px 30px 30px;
+    display: inline-block;
+    border: solid;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 75px;
+    text-align: center;
+    display: block;
+}
+
+h2 {
+    text-align: center;
+}
+
+.animes-list li {
+    display: inline-block;
+    padding-right: 75px;
+}
