@@ -1,0 +1,47 @@
+.header {
+    background-color: hsl(180, 76%, 44%);
+}
+
+.title {
+    text-align: center;
+    border: solid;
+    margin: 30px;
+    border-radius: 10px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    
+}
+
+.logo-box {
+    display: inline-block;
+}
+
+.logo-left {
+    border: solid;
+    width: 250px;
+    height: 300px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.nav-menu {
+    border: solid;
+    display: inline-block;
+    position: absolute; right: 10px;
+    margin-right: 100px;
+}
+
+.nav-menu ul {
+    text-align: right;
+    
+}
+
+.nav-menu li {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px;
+    color: black;
+    position: relative;
+    
+}
+
+
