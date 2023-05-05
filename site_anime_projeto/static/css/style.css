@@ -1,25 +1,33 @@
-#header-color {
-    
+#h1-color {
+    background-color: rgb(255, 174, 0);
 }
 
+.top-color {
+    height: 15px;
+    background-color: black;
+}
+
+.bottom-color {
+    height: 15px;
+    background-color: black;
+}
+
+#bg-color {
+    background-color: rgb(255, 174, 0);
+}
 
 .title {
-    margin-top: 15px;
     text-align: center;
     border: solid;
     border-radius: 10px;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 .bg-top {
     border: solid;
-    margin-top: 35px;
 }
 
-#bg {
-    width: 100%;
-}
 
 .logo-box {
     display: inline-block;
@@ -47,13 +55,12 @@
 .nav-menu li {
     display: inline-block;
     margin: 10px;
-    padding: 15px;
+    padding: 8px;
     color: black;
     position: relative;
-    
+    border: solid;
+    border-radius: 15px;
 }
-
-
 
 .nav-menu li:hover {
     color: blue;
@@ -64,9 +71,16 @@
     margin-left: 10px;
 }
 
-#search {
+#search-area {
     text-align: right;
     border: solid;
-    margin-right: 105px;
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
 }
 
+button {
+    border: none;
+    text-decoration: none;
+    background-color: rgb(255, 174, 0);
+}
