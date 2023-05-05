@@ -1,15 +1,35 @@
-.header {
-    background-color: hsl(180, 76%, 44%);
+/* Navbar + Header Layout start */
+
+#h1-color {
+    background-color: rgb(255, 174, 0);
+}
+
+.top-color {
+    height: 15px;
+    background-color: black;
+}
+
+.bottom-color {
+    height: 15px;
+    background-color: black;
+}
+
+#bg-color {
+    background-color: rgb(255, 174, 0);
 }
 
 .title {
     text-align: center;
     border: solid;
-    margin: 30px;
     border-radius: 10px;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
-    
+    margin-bottom: 0px;
 }
+
+.bg-top {
+    border: solid;
+}
+
 
 .logo-box {
     display: inline-block;
@@ -17,8 +37,6 @@
 
 .logo-left {
     border: solid;
-    width: 250px;
-    height: 300px;
     border-radius: 10px;
     display: inline-block;
 }
@@ -27,8 +45,9 @@
     border: solid;
     display: inline-block;
     position: absolute; right: 10px;
-    margin-right: 100px;
+    margin-right: 75px;
 }
+
 
 .nav-menu ul {
     text-align: right;
@@ -38,11 +57,36 @@
 .nav-menu li {
     display: inline-block;
     margin: 10px;
-    padding: 15px;
+    padding: 8px;
     color: black;
     position: relative;
     height: 100px;
 }
+
+.nav-menu li:hover {
+    color: blue;
+}
+
+#insta {
+    height: 50px;
+    margin-left: 10px;
+}
+
+#search-area {
+    text-align: right;
+    border: solid;
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+button {
+    border: none;
+    text-decoration: none;
+    background-color: rgb(255, 174, 0);
+}
+
+/* Navbar + Header Layout end */
 
 .decoration {
     display: block;
@@ -76,3 +120,4 @@ h2 {
     display: inline-block;
     padding-right: 75px;
 }
+
