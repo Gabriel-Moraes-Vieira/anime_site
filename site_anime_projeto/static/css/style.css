@@ -1,7 +1,7 @@
 /* Navbar + Header Layout */
 
     #h1-color {
-        background-color: rgb(255, 174, 0);
+        background-color: rgb(244, 247, 65);
     }
 
     .top-color {
@@ -15,7 +15,7 @@
     }
 
     #bg-color {
-        background-color: rgb(255, 174, 0);
+        background-color: rgb(244, 247, 65);
     }
 
     .title {
@@ -60,7 +60,7 @@
         padding: 8px;
         color: black;
         position: relative;
-        height: 100px;
+        border: solid;
     }
 
     .nav-menu li:hover {
@@ -83,13 +83,17 @@
     button {
         border: none;
         text-decoration: none;
-        background-color: rgb(255, 174, 0);
+        background-color: rgb(244, 247, 65);
     }
 
 /* Navbar + Header Layout end */
 
 
 /* Main Star*/
+
+main {
+    background-color: rgb(41, 37, 37);
+}
 
     /* Coming Soon content */
     h2 {
@@ -98,17 +102,28 @@
     }
 
     .container h2 {
-        height: 400px;
+        height: 500px;
         background-color: black;
     }
 
-    .decoration {
-        display: block;
-        width: 100%;
-        height: 400px;
-        border: solid;
-        background-color: rgb(41, 37, 37);
+   
+
+    #anime-select {
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+        position: absolute;
+        bottom: 5px;
+        margin-left: 32px;
+        color: rgba(245, 242, 238, 0.781);
     }
+
+    hr {
+        border: 3px solid rgba(245, 242, 238, 0.781);
+        position: relative;
+        bottom: 40px;
+        left: 30px;
+        width: 600px;
+    }
+
     /* End commingo soon content */
 
 
@@ -123,14 +138,16 @@
     }
 
     h3 {
+        margin-top: 20px;
         text-align: center;
         margin-bottom: 100px;
         font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+        color: rgba(245, 242, 238, 0.781);
     }
 
     .animes-list li {
         display: inline-block;
-        padding-right: 75px;
+        padding-right: 35px;
     }
 
     .footer {
