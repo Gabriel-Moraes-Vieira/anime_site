@@ -1,7 +1,7 @@
 /* Navbar + Header Layout */
 
     #h1-color {
-        background-color: rgb(244, 247, 65);
+        background-color: rgb(214, 16, 16);
     }
 
     .top-color {
@@ -15,7 +15,7 @@
     }
 
     #bg-color {
-        background-color: rgb(244, 247, 65);
+        background-color: rgb(228, 55, 55);
     }
 
     .title {
@@ -83,7 +83,7 @@
     button {
         border: none;
         text-decoration: none;
-        background-color: rgb(244, 247, 65);
+        background-color: rgb(228, 55, 55);
     }
 
 /* Navbar + Header Layout end */
@@ -95,18 +95,71 @@ main {
     background-color: rgb(41, 37, 37);
 }
 
-    /* Coming Soon content */
-    h2 {
-        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
-        text-align: center;
+    /* buttons / anime-transition  */
+
+    #flex-anime-transition {
+        display: flex;
+        justify-content: center;
     }
 
-    .container h2 {
-        height: 500px;
+
+    #back-button-a {
+        text-decoration: none;
+        color: rgba(245, 242, 238, 0.781);
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+    }
+
+    #back-button {
+        border-radius: 5px;
+        border: solid 3px rgba(245, 242, 238, 0.781);
+        color: rgba(245, 242, 238, 0.781);
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+    }
+
+    #skip-button {
+        border-radius: 5px;
+        border: solid 3px rgba(245, 242, 238, 0.781);
+        color: rgba(245, 242, 238, 0.781);
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+    }
+
+    #skip-button-a {
+        text-decoration: none;
+        color: rgba(245, 242, 238, 0.781);
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+    }
+
+    #flex-anime-transition-minibox {
+        color: white;
+        border: solid red 3px;
+        justify-content: space-evenly;
+        display: flex;
+        
+    }
+
+    #flex-anime-transition-minibox p {
+        color: white;
+        background-color: rgb(41, 37, 37);
+        border: 10px;
+        display: flex; 
+
+    }
+    /* End buttons / anime-transition content */
+
+
+    /* Anime list Content */
+    .container {
+        border: solid;
         background-color: black;
     }
-
-   
 
     #anime-select {
         font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
@@ -114,23 +167,6 @@ main {
         bottom: 5px;
         margin-left: 32px;
         color: rgba(245, 242, 238, 0.781);
-    }
-
-    hr {
-        border: 3px solid rgba(245, 242, 238, 0.781);
-        position: relative;
-        bottom: 40px;
-        left: 30px;
-        width: 600px;
-    }
-
-    /* End commingo soon content */
-
-
-    /* Anime list Content */
-    .container {
-        border: solid;
-        background-color: black;
     }
 
     .anime-color {
@@ -145,9 +181,27 @@ main {
         color: rgba(245, 242, 238, 0.781);
     }
 
+    hr {
+        border: 3px solid rgba(245, 242, 238, 0.781);
+        position: relative;
+        bottom: 30px;
+        left: 30px;
+        width: 30%;
+    }
+
     .animes-list li {
         display: inline-block;
         padding-right: 35px;
+    }
+
+
+    .animes-list li :hover {
+        
+    }
+
+    figcaption {
+        text-align: center;
+        color: rgba(245, 242, 238, 0.781);
     }
 
     .footer {
