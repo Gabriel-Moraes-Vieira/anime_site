@@ -171,8 +171,6 @@ main {
 
     #anime-select {
         font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
-        position: absolute;
-        bottom: 5px;
         margin-left: 32px;
         color: rgba(245, 242, 238, 0.781);
     }
@@ -192,9 +190,9 @@ main {
     hr {
         border: 3px solid rgba(245, 242, 238, 0.781);
         position: relative;
-        bottom: 30px;
+        bottom: 15px;
         left: 30px;
-        width: 30%;
+        width: 50%;
     }
 
     .animes-list li {
@@ -218,10 +216,21 @@ main {
     /* Releases Area Start*/
 
     h4 {
+        margin-top: 20px;
+        margin-bottom: 50px;
         color: rgba(245, 242, 238, 0.781);
         display: flex;
         align-items: start;
+        margin-left: 32px;
     }
+    
+    #text-releases {
+        margin-left: 32px;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: rgba(245, 242, 238, 0.781)
+    }
+
+    
 
     .footer {
         position: absolute;
