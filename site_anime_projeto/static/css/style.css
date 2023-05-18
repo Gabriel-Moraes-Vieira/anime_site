@@ -200,6 +200,11 @@ main {
         padding-right: 25px;
     }
 
+    .animes-list li img {
+        width: 200px;
+        height: 300px;
+    }
+
 
     .animes-list li :hover {
         border: solid rgb(41, 37, 37);
@@ -230,7 +235,6 @@ main {
         color: rgba(245, 242, 238, 0.781)
     }
 
-    
 
     .footer {
         position: absolute;
