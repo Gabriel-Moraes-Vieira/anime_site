@@ -1,7 +1,7 @@
 /* Navbar + Header Layout Start*/
 
     #h1-color {
-        background-color: rgb(214, 16, 16);
+        background-color: rgb(228, 55, 55);
     }
 
     .top-color {
@@ -142,7 +142,6 @@ main {
         border: solid red 3px;
         justify-content: space-evenly;
         display: flex;
-        
     }
 
     #flex-anime-transition-minibox a {
@@ -237,16 +236,27 @@ main {
 
 
     .footer {
-        height: 100px;
-        display: block;
-    }
-
-    #footer-div {
         background-color: black;
     }
 
     #footer-flex {
-        justify-content: center;
-        align-items: center;
         display: flex;
+        justify-content: center;
     }
+
+    #footer-flex figure img {
+        display: inline-flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        opacity: 0.5;
+    }
+
+    #social-media {
+        display: inline-flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        opacity: 1;
+    }
+    
