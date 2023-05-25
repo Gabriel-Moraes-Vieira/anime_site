@@ -1,91 +1,262 @@
-#header-color {
+/* Navbar + Header Layout Start*/
+
+    #h1-color {
+        background-color: rgb(228, 55, 55);
+    }
+
+    .top-color {
+        height: 15px;
+        background-color: black;
+    }
+
+    .bottom-color {
+        height: 15px;
+        background-color: black;
+    }
+
+    #bg-color {
+        background-color: rgb(228, 55, 55);
+    }
+
+    .title {
+        text-align: center;
+        border: solid;
+        border-radius: 10px;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+        margin-bottom: 0px;
+    }
+
+    .bg-top {
+        border: solid;
+    }
+
+
+    .logo-box {
+        display: inline-block;
+    }
+
+    .logo-left {
+        border: solid;
+        border-radius: 10px;
+        display: inline-block;
+    }
+
+    .nav-menu {
+        border: solid;
+        display: inline-block;
+        position: absolute; right: 10px;
+        margin-right: 75px;
+    }
+
+
+    .nav-menu ul {
+        text-align: right;
+        
+    }
+
+    .nav-menu li {
+        display: inline-block;
+        margin: 10px;
+        padding: 8px;
+        color: black;
+        position: relative;
+        border: solid;
+    }
+
+    .nav-menu li:hover {
+        color: blue;
+    }
+
+    #insta {
+        height: 50px;
+        margin-left: 10px;
+    }
+
+    #search-area {
+        text-align: right;
+        border: solid;
+        float: right;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+
+    button {
+        border: none;
+        text-decoration: none;
+        background-color: rgb(228, 55, 55);
+    }
+
+/* Navbar + Header Layout end */
+
+
+/* Main Star*/
+
+main {
+    background-color: rgb(41, 37, 37);
+}
+
+    /* button / anime-transition Start */
+
+    #flex-anime-transition {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    #back-button-a {
+        text-decoration: none;
+        color: rgba(245, 242, 238, 0.781);
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+    }
+
+    #back-button {
+        border-radius: 5px;
+        border: solid 3px rgba(245, 242, 238, 0.781);
+        color: rgba(245, 242, 238, 0.781);
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+    }
+
+    #skip-button {
+        border-radius: 5px;
+        border: solid 3px rgba(245, 242, 238, 0.781);
+        color: rgba(245, 242, 238, 0.781);
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+    }
+
+    #skip-button-a {
+        text-decoration: none;
+        color: rgba(245, 242, 238, 0.781);
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+    }
+
+    #flex-anime-transition-minibox {
+        color: white;
+        border: solid red 3px;
+        justify-content: space-evenly;
+        display: flex;
+    }
+
+    #flex-anime-transition-minibox a {
+        text-decoration: none;
+    }
+
+    #flex-anime-transition-minibox p {
+        border: 10px solid rgb(41, 37, 37);
+        color: white;
+        background-color: rgb(41, 37, 37);
+        display: flex;
+    }
+
+    #flex-anime-transition-minibox p:hover {
+        color: rgb(196, 192, 192);
+    }
+
+    /* End buttons / anime-transition content */
+
+
+    /* Anime list Content Start */
+    .container {
+        border: solid;
+        background-color: black;
+    }
+
+    #anime-select {
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+        margin-left: 32px;
+        color: rgba(245, 242, 238, 0.781);
+    }
+
+    .anime-color {
+        background-color: rgb(41, 37, 37);
+    }
+
+    h3 {
+        margin-top: 20px;
+        text-align: center;
+        margin-bottom: 100px;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+        color: rgba(245, 242, 238, 0.781);
+    }
+
+    hr {
+        border: 3px solid rgba(245, 242, 238, 0.781);
+        position: relative;
+        bottom: 15px;
+        left: 30px;
+        width: 50%;
+    }
+
+    .animes-list li {
+        display: inline-block;
+        padding-right: 25px;
+    }
+
+    .animes-list li img {
+        width: 200px;
+        height: 300px;
+    }
+
+
+    .animes-list li :hover {
+        border: solid rgb(41, 37, 37);
+        background-color: rgb(41, 37, 37);
+    }
+
+    figcaption {
+        text-align: center;
+        color: rgba(245, 242, 238, 0.781);
+    }
     
-}
+    /* End Anime list Content */
 
+    /* Releases Area Start*/
 
-.title {
-    text-align: center;
-    border: solid;
-    border-radius: 10px;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
-    margin-bottom: 20px;
-}
-
-.bg-top {
-    border: solid;
-}
-
-#bg {
-    width: 100%;
-}
-
-.logo-box {
-    display: inline-block;
-}
-
-.logo-left {
-    border: solid;
-    width: 250px;
-    height: 300px;
-    border-radius: 10px;
-    display: inline-block;
-}
-
-.nav-menu {
-    border: solid;
-    display: inline-block;
-    position: absolute; right: 10px;
-    margin-right: 100px;
-}
-
-.nav-menu ul {
-    text-align: right;
+    h4 {
+        margin-top: 20px;
+        margin-bottom: 50px;
+        color: rgba(245, 242, 238, 0.781);
+        display: flex;
+        align-items: start;
+        margin-left: 32px;
+    }
     
-}
-
-.nav-menu li {
-    display: inline-block;
-    margin: 10px;
-    padding: 15px;
-    color: black;
-    position: relative;
-    height: 100px;
-}
-
-.decoration {
-    display: block;
-    width: 100%;
-    height: 220px;
-    border: solid;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-.nav-menu li:hover {
-    color: blue;
-}
+    #text-releases {
+        margin-left: 32px;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: rgba(245, 242, 238, 0.781)
+    }
 
 
+    .footer {
+        background-color: black;
+    }
 
-.main-animes {
-    padding: 200px 85px 30px 30px;
-    display: inline-block;
-    border: solid;
-}
+    #footer-flex {
+        display: flex;
+        justify-content: center;
+    }
 
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 75px;
-    text-align: center;
-    display: block;
-}
+    #footer-flex figure img {
+        display: inline-flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        opacity: 0.5;
+    }
 
-h2 {
-    text-align: center;
-}
-
-.animes-list li {
-    display: inline-block;
-    padding-right: 75px;
-}
+    #social-media {
+        display: inline-flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        opacity: 1;
+    }
+    
