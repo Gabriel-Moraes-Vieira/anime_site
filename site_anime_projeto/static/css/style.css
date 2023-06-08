@@ -238,32 +238,6 @@ main {
         font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         color: rgba(245, 242, 238, 0.781)
     }
-
-
-    .footer {
-        background-color: black;
-    }
-
-    #footer-flex {
-        display: flex;
-        justify-content: center;
-    }
-
-    #footer-flex figure img {
-        display: inline-flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: space-evenly;
-        opacity: 0.5;
-    }
-
-    #social-media {
-        display: inline-flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: space-evenly;
-        opacity: 1;
-    }
     
     /* Releases_Area_End*/
 
@@ -386,3 +360,116 @@ main {
 /* Busca.html end*/
 
 /* Login.html*/
+
+    #logo-header {
+        display: flex;
+        justify-content: center;
+        background-color: rgb(27, 25, 25);
+    }
+
+    #logo-header a {
+        display: flex;
+        padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+        text-decoration: none;
+        
+    }
+    
+
+    #logo-header img {
+        width: 35px;
+    }
+
+    #box {
+        display: flex;
+        justify-content: center;
+        padding: 12.5vh 0 12.5vh 0;
+        background-color: black;
+    }
+
+    #login-menu {
+        border: 1px solid rgba(245, 242, 238, 0.781);
+        text-align: center;
+        width: 22rem;
+        border-radius: 10px;
+        background-color: rgb(27, 25, 25);
+    }
+    
+    #login-menu h1 {
+        font-size: 40px;
+        padding: 1rem 0 1rem 0;
+        color: rgba(245, 242, 238, 0.781);
+    }
+
+    #login-hr {
+        display: flex;
+        border: 1px solid rgba(245, 242, 238, 0.781);
+        
+        width: 18rem;
+    }
+
+    #login-menu p {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    #login-menu input {
+        display: flex;
+        margin: 0 0 0 1rem;
+        width: 20rem;
+        border-radius: 5px;
+        background-color: rgb(41, 37, 37);
+        text-decoration: none;
+        color: rgba(245, 242, 238, 0.781);
+    }
+
+    #login-menu input:hover {
+        background-color: rgb(27, 25, 25);
+    }
+
+
+    input::placeholder {
+        color: rgba(245, 242, 238, 0.781);
+        opacity: 0.6;
+    }
+
+    #login-menu input, value {
+        text-align: center;
+    }
+
+    #login-menu p, label {
+        display: block;
+    }
+
+    #login-menu p label {
+        color: rgba(245, 242, 238, 0.781);
+    }
+    
+
+/* footer Start*/
+    
+.footer {
+    background-color: black;
+}
+
+#footer-flex {
+    display: flex;
+    justify-content: center;
+}
+
+#footer-flex figure img {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    opacity: 0.5;
+}
+
+#social-media {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    opacity: 1;
+}
+
+/*  footer end */
