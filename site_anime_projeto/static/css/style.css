@@ -86,16 +86,21 @@
         background-color: rgb(228, 55, 55);
     }
 
-/* Navbar + Header Layout end */
+    button:hover {
+        border: none;
+        background-color: rgb(243, 72, 72);
+    }
+
+/* Navbar + Header_Layout_end */
 
 
-/* Main Star*/
+/* index_Main_Star*/
 
 main {
     background-color: rgb(41, 37, 37);
 }
 
-    /* button / anime-transition Start */
+    /* button / anime_transition_Start */
 
     #flex-anime-transition {
         display: flex;
@@ -159,10 +164,10 @@ main {
         color: rgb(196, 192, 192);
     }
 
-    /* End buttons / anime-transition content */
+    /* End_buttons / anime_transition_content */
 
 
-    /* Anime list Content Start */
+    /* Anime_list_Content_Start */
     .container {
         border: solid;
         background-color: black;
@@ -215,9 +220,9 @@ main {
         color: rgba(245, 242, 238, 0.781);
     }
     
-    /* End Anime list Content */
+    /* End_Anime_list_Content */
 
-    /* Releases Area Start*/
+    /* Releases_Area_Start*/
 
     h4 {
         margin-top: 20px;
@@ -233,30 +238,238 @@ main {
         font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         color: rgba(245, 242, 238, 0.781)
     }
+    
+    /* Releases_Area_End*/
 
+    /* Search.html_Search_Start */
 
-    .footer {
+/* index_MainEnd*/
+    
+/* Busca.html*/
+    #header {
+        background-color: rgb(27, 25, 25);
+        flex: 0 0 3.75rem;
+        padding: 0.5em 0 0.01em 0;
+    }
+
+    #header-start {
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    #ul-flex {
+        display: flex;
+    }
+
+    ul li {
+        list-style-type: none;
+    }
+
+    #home-header {
+        display: flex;
+        flex: 0.7 1 0.250rem
+    }
+
+    #menu-header {
+        display: flex;
+        flex: 0.2 0 0.1rem;
+        text-decoration: none;
+    }
+
+    /* Sub menu */
+    #user-header {
+        display: flex;
+        flex: 0.2 0 0.1rem;
+        
+    }
+
+    #ul-flex li a {
+        color: rgba(245, 242, 238, 0.781);
+        text-decoration: none;
+    }
+
+    #btn-close {
+        color: white;
+        display: flex;
+        justify-content: end;
+        padding-bottom: 15px;
+    }
+
+    #hidden-user-menu {
+        position: fixed;
+        height: 0;
+        width: 0;
+        z-index: 1;
+        top: 0;
+        overflow-y: hidden;
+        transition: 0.4s;
+        background-color: rgb(27, 25, 25);
+        opacity: 1;
+        margin-top: 2.5rem;
+        
+    }
+
+    #hidden-user-menu a {
+        display: block;
+        text-decoration: none;
+        padding: 1rem 0 1rem 0;
+        transition: 0.4;
+        border: 1px solid rgba(245, 242, 238, 0.781);
+    }
+
+    #hidden-user-menu a:hover {
+        background-color: rgb(41, 37, 37);
+    }
+
+    /* Sub_menu _end_content */
+
+    /* Search */  
+
+    #search-content {
+        height: 600px;
         background-color: black;
     }
 
-    #footer-flex {
+    #search-field {
         display: flex;
         justify-content: center;
+        padding-top: 4rem;
+        padding-bottom: 2rem;
+        background-color: rgb(20, 19, 19);
     }
 
-    #footer-flex figure img {
-        display: inline-flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: space-evenly;
-        opacity: 0.5;
+    #search-input {
+        display: flex;
     }
 
-    #social-media {
-        display: inline-flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: space-evenly;
-        opacity: 1;
+    #input-btn {
+        font-size: 2.5rem;
+        border: none;
+        border-bottom: 0.1rem solid rgba(245, 242, 238, 0.781);
+        width: 100%;
+        background-color: rgb(20, 19, 19);
+        color: rgba(245, 242, 238, 0.781);
+    }
+
+    input:focus {
+        outline: 0;
+    }
+    /* Search_end_content */
+
+/* Busca.html end*/
+
+/* Login.html*/
+
+    #logo-header {
+        display: flex;
+        justify-content: center;
+        background-color: rgb(27, 25, 25);
+    }
+
+    #logo-header a {
+        display: flex;
+        padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+        text-decoration: none;
+        
     }
     
+
+    #logo-header img {
+        width: 35px;
+    }
+
+    #box {
+        display: flex;
+        justify-content: center;
+        padding: 12.5vh 0 12.5vh 0;
+        background-color: black;
+    }
+
+    #login-menu {
+        border: 1px solid rgba(245, 242, 238, 0.781);
+        text-align: center;
+        width: 22rem;
+        border-radius: 10px;
+        background-color: rgb(27, 25, 25);
+    }
+    
+    #login-menu h1 {
+        font-size: 40px;
+        padding: 1rem 0 1rem 0;
+        color: rgba(245, 242, 238, 0.781);
+    }
+
+    #login-hr {
+        display: flex;
+        border: 1px solid rgba(245, 242, 238, 0.781);
+        
+        width: 18rem;
+    }
+
+    #login-menu p {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    #login-menu input {
+        display: flex;
+        margin: 0 0 0 1rem;
+        width: 20rem;
+        border-radius: 5px;
+        background-color: rgb(41, 37, 37);
+        text-decoration: none;
+        color: rgba(245, 242, 238, 0.781);
+    }
+
+    #login-menu input:hover {
+        background-color: rgb(27, 25, 25);
+    }
+
+
+    input::placeholder {
+        color: rgba(245, 242, 238, 0.781);
+        opacity: 0.6;
+    }
+
+    #login-menu input, value {
+        text-align: center;
+    }
+
+    #login-menu p, label {
+        display: block;
+    }
+
+    #login-menu p label {
+        color: rgba(245, 242, 238, 0.781);
+    }
+    
+
+/* footer Start*/
+    
+.footer {
+    background-color: black;
+}
+
+#footer-flex {
+    display: flex;
+    justify-content: center;
+}
+
+#footer-flex figure img {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    opacity: 0.5;
+}
+
+#social-media {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    opacity: 1;
+}
+
+/*  footer end */

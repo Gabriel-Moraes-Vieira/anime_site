@@ -23,12 +23,12 @@
             <ul>
                 <a href=""><li>Home</li></a>
                 <a href=""><li>Support</li></a>
-                <a href=""><li>Login</li></a>
+                <a href="{% url 'login' %}"><li>Login</li></a>
             </ul>
         </nav> 
         
         <div id="search-area">
-            <button><i class="bi bi-search" id="search"></i></button>
+            <a href="{% url 'busca' %}"><button><i class="bi bi-search" id="search"></i></button></a>
         </div>
 
         <div class="bottom-color"></div>
@@ -131,17 +131,6 @@
             </li>
         </ul>
     </div>
-    <footer class="footer">  
-        <div id="footer-flex">
-            <figure>
-                    <img src="{% static 'img/footer-logo.png' %}" alt="footer-logo">
-            </figure>   
-            <figure id="social-media">
-                <a href="https://www.instagram.com/gabriel1_mv/"><i class="bi bi-instagram" id="instagram-footer"></i></a>
-                <a href="https://github.com/Gabriel-Moraes-Vieira"><i class="bi bi-github"></i></a>
-                <a href="https://www.linkedin.com/in/gabriel-moraes-737669250/"><i class="bi bi-linkedin"></i></a>
-            </figure>  
-        </div>
-    </footer>
+    {% include 'partials/_footer.html' %}
     </main>
 {% endblock %}
