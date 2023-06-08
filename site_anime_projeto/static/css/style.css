@@ -1,86 +1,475 @@
-#h1-color {
-    background-color: rgb(255, 174, 0);
+/* Navbar + Header Layout Start*/
+
+    #h1-color {
+        background-color: rgb(228, 55, 55);
+    }
+
+    .top-color {
+        height: 15px;
+        background-color: black;
+    }
+
+    .bottom-color {
+        height: 15px;
+        background-color: black;
+    }
+
+    #bg-color {
+        background-color: rgb(228, 55, 55);
+    }
+
+    .title {
+        text-align: center;
+        border: solid;
+        border-radius: 10px;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+        margin-bottom: 0px;
+    }
+
+    .bg-top {
+        border: solid;
+    }
+
+
+    .logo-box {
+        display: inline-block;
+    }
+
+    .logo-left {
+        border: solid;
+        border-radius: 10px;
+        display: inline-block;
+    }
+
+    .nav-menu {
+        border: solid;
+        display: inline-block;
+        position: absolute; right: 10px;
+        margin-right: 75px;
+    }
+
+
+    .nav-menu ul {
+        text-align: right;
+        
+    }
+
+    .nav-menu li {
+        display: inline-block;
+        margin: 10px;
+        padding: 8px;
+        color: black;
+        position: relative;
+        border: solid;
+    }
+
+    .nav-menu li:hover {
+        color: blue;
+    }
+
+    #insta {
+        height: 50px;
+        margin-left: 10px;
+    }
+
+    #search-area {
+        text-align: right;
+        border: solid;
+        float: right;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+
+    button {
+        border: none;
+        text-decoration: none;
+        background-color: rgb(228, 55, 55);
+    }
+
+    button:hover {
+        border: none;
+        background-color: rgb(243, 72, 72);
+    }
+
+/* Navbar + Header_Layout_end */
+
+
+/* index_Main_Star*/
+
+main {
+    background-color: rgb(41, 37, 37);
 }
 
-.top-color {
-    height: 15px;
-    background-color: black;
-}
+    /* button / anime_transition_Start */
 
-.bottom-color {
-    height: 15px;
-    background-color: black;
-}
-
-#bg-color {
-    background-color: rgb(255, 174, 0);
-}
-
-.title {
-    text-align: center;
-    border: solid;
-    border-radius: 10px;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
-    margin-bottom: 0px;
-}
-
-.bg-top {
-    border: solid;
-}
+    #flex-anime-transition {
+        display: flex;
+        justify-content: center;
+    }
 
 
-.logo-box {
-    display: inline-block;
-}
+    #back-button-a {
+        text-decoration: none;
+        color: rgba(245, 242, 238, 0.781);
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+    }
 
-.logo-left {
-    border: solid;
-    border-radius: 10px;
-    display: inline-block;
-}
+    #back-button {
+        border-radius: 5px;
+        border: solid 3px rgba(245, 242, 238, 0.781);
+        color: rgba(245, 242, 238, 0.781);
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+    }
 
-.nav-menu {
-    border: solid;
-    display: inline-block;
-    position: absolute; right: 10px;
-    margin-right: 75px;
-}
+    #skip-button {
+        border-radius: 5px;
+        border: solid 3px rgba(245, 242, 238, 0.781);
+        color: rgba(245, 242, 238, 0.781);
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+    }
+
+    #skip-button-a {
+        text-decoration: none;
+        color: rgba(245, 242, 238, 0.781);
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+    }
+
+    #flex-anime-transition-minibox {
+        color: white;
+        border: solid red 3px;
+        justify-content: space-evenly;
+        display: flex;
+    }
+
+    #flex-anime-transition-minibox a {
+        text-decoration: none;
+    }
+
+    #flex-anime-transition-minibox p {
+        border: 10px solid rgb(41, 37, 37);
+        color: white;
+        background-color: rgb(41, 37, 37);
+        display: flex;
+    }
+
+    #flex-anime-transition-minibox p:hover {
+        color: rgb(196, 192, 192);
+    }
+
+    /* End_buttons / anime_transition_content */
 
 
-.nav-menu ul {
-    text-align: right;
+    /* Anime_list_Content_Start */
+    .container {
+        border: solid;
+        background-color: black;
+    }
+
+    #anime-select {
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+        margin-left: 32px;
+        color: rgba(245, 242, 238, 0.781);
+    }
+
+    .anime-color {
+        background-color: rgb(41, 37, 37);
+    }
+
+    h3 {
+        margin-top: 20px;
+        text-align: center;
+        margin-bottom: 100px;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+        color: rgba(245, 242, 238, 0.781);
+    }
+
+    hr {
+        border: 3px solid rgba(245, 242, 238, 0.781);
+        position: relative;
+        bottom: 15px;
+        left: 30px;
+        width: 50%;
+    }
+
+    .animes-list li {
+        display: inline-block;
+        padding-right: 25px;
+    }
+
+    .animes-list li img {
+        width: 200px;
+        height: 300px;
+    }
+
+
+    .animes-list li :hover {
+        border: solid rgb(41, 37, 37);
+        background-color: rgb(41, 37, 37);
+    }
+
+    figcaption {
+        text-align: center;
+        color: rgba(245, 242, 238, 0.781);
+    }
     
+    /* End_Anime_list_Content */
+
+    /* Releases_Area_Start*/
+
+    h4 {
+        margin-top: 20px;
+        margin-bottom: 50px;
+        color: rgba(245, 242, 238, 0.781);
+        display: flex;
+        align-items: start;
+        margin-left: 32px;
+    }
+    
+    #text-releases {
+        margin-left: 32px;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: rgba(245, 242, 238, 0.781)
+    }
+    
+    /* Releases_Area_End*/
+
+    /* Search.html_Search_Start */
+
+/* index_MainEnd*/
+    
+/* Busca.html*/
+    #header {
+        background-color: rgb(27, 25, 25);
+        flex: 0 0 3.75rem;
+        padding: 0.5em 0 0.01em 0;
+    }
+
+    #header-start {
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    #ul-flex {
+        display: flex;
+    }
+
+    ul li {
+        list-style-type: none;
+    }
+
+    #home-header {
+        display: flex;
+        flex: 0.7 1 0.250rem
+    }
+
+    #menu-header {
+        display: flex;
+        flex: 0.2 0 0.1rem;
+        text-decoration: none;
+    }
+
+    /* Sub menu */
+    #user-header {
+        display: flex;
+        flex: 0.2 0 0.1rem;
+        
+    }
+
+    #ul-flex li a {
+        color: rgba(245, 242, 238, 0.781);
+        text-decoration: none;
+    }
+
+    #btn-close {
+        color: white;
+        display: flex;
+        justify-content: end;
+        padding-bottom: 15px;
+    }
+
+    #hidden-user-menu {
+        position: fixed;
+        height: 0;
+        width: 0;
+        z-index: 1;
+        top: 0;
+        overflow-y: hidden;
+        transition: 0.4s;
+        background-color: rgb(27, 25, 25);
+        opacity: 1;
+        margin-top: 2.5rem;
+        
+    }
+
+    #hidden-user-menu a {
+        display: block;
+        text-decoration: none;
+        padding: 1rem 0 1rem 0;
+        transition: 0.4;
+        border: 1px solid rgba(245, 242, 238, 0.781);
+    }
+
+    #hidden-user-menu a:hover {
+        background-color: rgb(41, 37, 37);
+    }
+
+    /* Sub_menu _end_content */
+
+    /* Search */  
+
+    #search-content {
+        height: 600px;
+        background-color: black;
+    }
+
+    #search-field {
+        display: flex;
+        justify-content: center;
+        padding-top: 4rem;
+        padding-bottom: 2rem;
+        background-color: rgb(20, 19, 19);
+    }
+
+    #search-input {
+        display: flex;
+    }
+
+    #input-btn {
+        font-size: 2.5rem;
+        border: none;
+        border-bottom: 0.1rem solid rgba(245, 242, 238, 0.781);
+        width: 100%;
+        background-color: rgb(20, 19, 19);
+        color: rgba(245, 242, 238, 0.781);
+    }
+
+    input:focus {
+        outline: 0;
+    }
+    /* Search_end_content */
+
+/* Busca.html end*/
+
+/* Login.html*/
+
+    #logo-header {
+        display: flex;
+        justify-content: center;
+        background-color: rgb(27, 25, 25);
+    }
+
+    #logo-header a {
+        display: flex;
+        padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+        text-decoration: none;
+        
+    }
+    
+
+    #logo-header img {
+        width: 35px;
+    }
+
+    #box {
+        display: flex;
+        justify-content: center;
+        padding: 12.5vh 0 12.5vh 0;
+        background-color: black;
+    }
+
+    #login-menu {
+        border: 1px solid rgba(245, 242, 238, 0.781);
+        text-align: center;
+        width: 22rem;
+        border-radius: 10px;
+        background-color: rgb(27, 25, 25);
+    }
+    
+    #login-menu h1 {
+        font-size: 40px;
+        padding: 1rem 0 1rem 0;
+        color: rgba(245, 242, 238, 0.781);
+    }
+
+    #login-hr {
+        display: flex;
+        border: 1px solid rgba(245, 242, 238, 0.781);
+        
+        width: 18rem;
+    }
+
+    #login-menu p {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    #login-menu input {
+        display: flex;
+        margin: 0 0 0 1rem;
+        width: 20rem;
+        border-radius: 5px;
+        background-color: rgb(41, 37, 37);
+        text-decoration: none;
+        color: rgba(245, 242, 238, 0.781);
+    }
+
+    #login-menu input:hover {
+        background-color: rgb(27, 25, 25);
+    }
+
+
+    input::placeholder {
+        color: rgba(245, 242, 238, 0.781);
+        opacity: 0.6;
+    }
+
+    #login-menu input, value {
+        text-align: center;
+    }
+
+    #login-menu p, label {
+        display: block;
+    }
+
+    #login-menu p label {
+        color: rgba(245, 242, 238, 0.781);
+    }
+    
+
+/* footer Start*/
+    
+.footer {
+    background-color: black;
 }
 
-.nav-menu li {
-    display: inline-block;
-    margin: 10px;
-    padding: 8px;
-    color: black;
-    position: relative;
-    border: solid;
-    border-radius: 15px;
+#footer-flex {
+    display: flex;
+    justify-content: center;
 }
 
-.nav-menu li:hover {
-    color: blue;
+#footer-flex figure img {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    opacity: 0.5;
 }
 
-#insta {
-    height: 50px;
-    margin-left: 10px;
+#social-media {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    opacity: 1;
 }
 
-#search-area {
-    text-align: right;
-    border: solid;
-    float: right;
-    margin-top: 20px;
-    margin-right: 20px;
-}
-
-button {
-    border: none;
-    text-decoration: none;
-    background-color: rgb(255, 174, 0);
-}
+/*  footer end */
