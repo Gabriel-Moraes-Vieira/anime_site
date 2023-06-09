@@ -2,45 +2,33 @@
 {% load static %}
 {% block content %}
 
-    <div class="top-color"></div>
-
-            <!--NavStart-->
-    <div id="h1-color">
-        <h1 class="title">OUNI ANIMES</h1>
+<header>
+    <div id="logo-header-index">
+        <img src="{% static 'img/luffy-logo-header.jpg' %}" alt="Luffy" id="luffy-header"><a href="{% url 'index' %}">Ouni Animes</a><img src="{% static 'img/straw-hat-logo-header.jpg' %}" alt="">
+        <ul id="index-ul-header">
+            <li id="index-home-header">
+                <a href="{% url 'index' %}">Home</a>
+            </li>
+            <li>
+                <a href="{% url 'login' %}">Login</a>
+            </li>
+            <li>
+                <a href="{% url 'cadastro' %}">Cadastro</a>
+            </li>
+            <li>
+                <a href="{% url 'busca' %}"><i class="bi bi-search"></i></a>
+            </li>
+        </ul>
     </div>
-
-    <div class="bottom-color"></div>
-    
-    <!--image/start navblock-->
-    <div id="bg-color">
-        <div class="logo-box">
-            <a href="https://www.crunchyroll.com/pt-br/series/G9VHN9PPW/dragon-ball-z"><img src="{% static 'img/luffy-logo.jpg' %}" class="logo-left" alt="LUFFY"></a>
-        </div>
-        
-        
-        <!--NavStart-->
-        <nav class="nav-menu">
-            <ul>
-                <a href=""><li>Home</li></a>
-                <a href=""><li>Support</li></a>
-                <a href="{% url 'login' %}"><li>Login</li></a>
-            </ul>
-        </nav> 
-        
-        <div id="search-area">
-            <a href="{% url 'busca' %}"><button><i class="bi bi-search" id="search"></i></button></a>
-        </div>
-
-        <div class="bottom-color"></div>
-    </div>
+</header>
 
 <body>
     <main>
 
         <div class="container" id="flex-anime-transition">
-            <a href="" id="back-button-a"><i class="bi bi-box-arrow-left" id="back-button"></i></a>
+            <a href="" id="back-button-a"><i class="bi bi-arrow-left"></i></i></a>
             <figure class="image-list"><a href=""><img src="{% static 'img/dbz-lista.jpg' %}" alt="DBZ"></a></figure>
-            <a href="" id="skip-button-a"><i class="bi bi-box-arrow-right" id="skip-button"></i></a>
+            <a href="" id="skip-button-a"><i class="bi bi-arrow-right"></i></i></a>
         </div>
         <div class="container"> 
             <div class="flex-container" id="flex-anime-transition-minibox">
