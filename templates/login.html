@@ -32,13 +32,10 @@
                     <label for="senha">Senha</label>
                     <input type="password" name="senha" id="senha" required="required" placeholder="Exemplo... 1234">
                 </p>
-                <p>
+                <p id="login-btn-p">
                     <input type="submit" value="Logar" onclick="exibirCriarConta">
                 </p>
-                <p>
-                    <label for="cadastrar">Ainda não possui cadastro?</label>
-                    <input type="submit" name="cadastrar" id="cadastrar" value="cadastrar">
-                </p>
+                <p>Ainda não possui cadastro?<a href="{% url 'cadastro' %}" id="redirect-login-a">Clique aqui</a></p>
             </div>
         </div>
     </main>

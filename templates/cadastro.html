@@ -12,7 +12,7 @@
 </head>
 
 <header>
-    <div id="logo-header-cadastro">
+    <div id="logo-header-register">
         <img src="{% static 'img/luffy-logo-header.jpg' %}" alt="Luffy" id="luffy-header"><a href="{% url 'index' %}">Ouni Animes</a><img src="{% static 'img/straw-hat-logo-header.jpg' %}" alt="">
     </div>
 </header>
@@ -20,10 +20,10 @@
 <body>
     <main>
         <div id="box">
-            <div id="cadastro-menu">
+            <div id="register-menu">
                 <form action="#" method="#"></form>
                 <h1>Cadastro</h1>
-                <hr id="cadastro-hr">
+                <hr id="register-hr">
                 <p>
                 <label for="email">Email</label>
                 <input type="text" name="email" id="email" required="required" placeholder="Exemplo... exemplo@gmail.com"> 
@@ -36,10 +36,10 @@
                     <label for="senha">Senha</label>
                     <input type="password" name="senha" id="senha" required="required" placeholder="Exemplo... 1234">
                 </p>
-                <p>
+                <p id="create-account-register">
                     <input type="submit" value="CRIAR CONTA" onclick="exibirCriarConta">
                 </p>
-                <P>Já possui uma conta? <a href="{% url 'login' %}" id="cadastro-a">ENTRAR</a></P>
+                <P>Já possui uma conta? <a href="{% url 'login' %}" id="register-a">ENTRAR</a></P>
             </div>
         </div>
     </main>
