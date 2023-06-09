@@ -1,95 +1,45 @@
 /* Navbar + Header Layout Start*/
-
-    #h1-color {
-        background-color: rgb(228, 55, 55);
+    #logo-header-index {
+        display: flex;
+        justify-content: center;
+        background-color: rgb(27, 25, 25);
+        padding: 0.5rem 0 0.5rem 0;
     }
 
-    .top-color {
-        height: 15px;
-        background-color: black;
-    }
-
-    .bottom-color {
-        height: 15px;
-        background-color: black;
-    }
-
-    #bg-color {
-        background-color: rgb(228, 55, 55);
-    }
-
-    .title {
-        text-align: center;
-        border: solid;
-        border-radius: 10px;
-        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
-        margin-bottom: 0px;
-    }
-
-    .bg-top {
-        border: solid;
-    }
-
-
-    .logo-box {
-        display: inline-block;
-    }
-
-    .logo-left {
-        border: solid;
-        border-radius: 10px;
-        display: inline-block;
-    }
-
-    .nav-menu {
-        border: solid;
-        display: inline-block;
-        position: absolute; right: 10px;
-        margin-right: 75px;
-    }
-
-
-    .nav-menu ul {
-        text-align: right;
+    #logo-header-index a {
+        display: flex;
+        padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+        text-decoration: none;
         
     }
 
-    .nav-menu li {
-        display: inline-block;
-        margin: 10px;
-        padding: 8px;
-        color: black;
-        position: relative;
-        border: solid;
+
+    #logo-header-index img {
+        width: 35px;
+        height: 35px;
+
     }
 
-    .nav-menu li:hover {
-        color: blue;
+    #logo-header-index nav ul {
+        display: flex;
     }
 
-    #insta {
-        height: 50px;
-        margin-left: 10px;
+    #logo-header-index nav ul li {
+        padding: 0 2rem 0 2rem;
+        margin: 0.3rem 0 0.3rem 0;
+        color: rgba(245, 242, 238, 0.781);
     }
 
-    #search-area {
-        text-align: right;
-        border: solid;
-        float: right;
-        margin-top: 20px;
-        margin-right: 20px;
+    #index-ul-header {
+        display: flex;
     }
 
-    button {
-        border: none;
-        text-decoration: none;
-        background-color: rgb(228, 55, 55);
+    #index-home-header {
+        display: flex;
+        flex: 0.5rem 1 0.2rem;
     }
 
-    button:hover {
-        border: none;
-        background-color: rgb(243, 72, 72);
-    }
+
 
 /* Navbar + Header_Layout_end */
 
@@ -361,13 +311,13 @@ main {
 
 /* Login.html*/
 
-    #logo-header {
+    #logo-header-login {
         display: flex;
         justify-content: center;
         background-color: rgb(27, 25, 25);
     }
 
-    #logo-header a {
+    #logo-header-login a {
         display: flex;
         padding: 0.2rem 0.5rem 0.2rem 0.5rem;
         text-decoration: none;
@@ -375,7 +325,7 @@ main {
     }
     
 
-    #logo-header img {
+    #logo-header-login img {
         width: 35px;
     }
 
@@ -386,7 +336,7 @@ main {
         background-color: black;
     }
 
-    #login-menu {
+    #login-menu  {
         border: 1px solid rgba(245, 242, 238, 0.781);
         text-align: center;
         width: 22rem;
@@ -403,7 +353,6 @@ main {
     #login-hr {
         display: flex;
         border: 1px solid rgba(245, 242, 238, 0.781);
-        
         width: 18rem;
     }
 
@@ -444,6 +393,92 @@ main {
         color: rgba(245, 242, 238, 0.781);
     }
     
+/* login.html end*/
+
+/* cadastro.html start*/
+
+    #cadastro-menu  {
+        border: 1px solid rgba(245, 242, 238, 0.781);
+        text-align: center;
+        width: 22rem;
+        border-radius: 10px;
+        background-color: rgb(27, 25, 25);
+    }
+
+    #cadastro-menu h1 {
+        font-size: 40px;
+        padding: 1rem 0 1rem 0;
+        color: rgba(245, 242, 238, 0.781);
+    }
+
+    #logo-header-cadastro img {
+        width: 35px;
+    }
+
+    #logo-header-cadastro {
+        display: flex;
+        justify-content: center;
+        background-color: rgb(27, 25, 25);
+    }
+
+    #logo-header-cadastro a {
+        display: flex;
+        padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+        text-decoration: none;
+        
+    }
+
+    #cadastro-hr {
+        display: flex;
+        border: 1px solid rgba(245, 242, 238, 0.781);
+        width: 18rem;
+    }
+
+    #cadastro-menu p {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    #cadastro-menu input {
+        display: flex;
+        margin: 0 0 0 1rem;
+        width: 20rem;
+        border-radius: 5px;
+        background-color: rgb(41, 37, 37);
+        text-decoration: none;
+        color: rgba(245, 242, 238, 0.781);
+    }
+
+    #cadastro-menu input:hover {
+        background-color: rgb(27, 25, 25);
+    }
+
+
+    input::placeholder {
+        color: rgba(245, 242, 238, 0.781);
+        opacity: 0.6;
+    }
+
+    #cadastro-menu input, value {
+        text-align: center;
+    }
+
+    #cadastro-menu p, label {
+        display: block;
+    }
+
+    #cadastro-menu p label {
+        color: rgba(245, 242, 238, 0.781);
+    }
+
+    #cadastro-menu p {
+        color: rgba(245, 242, 238, 0.781);
+    }
+
+    #cadastro-a {
+        color: orange;
+        text-decoration: none;
+    }
 
 /* footer Start*/
     
