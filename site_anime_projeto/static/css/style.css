@@ -1,48 +1,134 @@
-/* Navbar + Header Layout Start*/
-    #logo-header-index {
-        display: flex;
-        justify-content: center;
-        background-color: rgb(27, 25, 25);
-        padding: 0.5rem 0 0 0;
-    }
+/* Header + Submenu */
+    /*Header Start*/
+        body {
+            width: 100%;
+            background-color: rgb(41, 37, 37);
+        }
 
-    #logo-header-index a {
-        display: flex;
-        padding: 0.3rem 0.5rem 0 0.5rem;
-        text-decoration: none;
-        
-    }
+        @media screen and (max-width: 768px) {
+            #main {
+                width: 100%;
+                flex-direction: column;
+            }
+            
+        }
 
+        #logo-header-index {
+            display: flex;
+            justify-content: center;
+            background-color: rgb(27, 25, 25);
+            padding: 0.5rem 0 0 0;
+        }
 
-    #logo-header-index img {
-        width: 35px;
-        height: 35px;
+        #logo-header-index a {
+            display: flex;
+            padding: 0.3rem 0.5rem 0 0.5rem;
+            text-decoration: none;
+            color: rgba(245, 242, 238, 0.781);
+        }
 
-    }
+        #logo-header-index a:hover {
+            background-color: rgb(37, 34, 34);
+            color: rgba(223, 213, 202, 0.781)
+        }
 
-    #logo-header-index nav ul {
-        display: flex;
-    }
+        #logo-header-index img {
+            width: 35px;
+            height: 35px;
 
-    #logo-header-index nav ul li {
-        padding: 0 2rem 0 2rem;
-        margin: 0.3rem 0 0.3rem 0;
-        color: rgba(245, 242, 238, 0.781);
-    }
+        }
 
-    #index-ul-header {
-        display: flex;
-    }
+        #logo-header-index nav ul {
+            display: flex;
+        }
 
-    #index-home-header {
-        display: flex;
-        flex: 0.5rem 1 0.2rem;
-    }
+        #logo-header-index nav ul li {
+            padding: 0 2rem 0 2rem;
+            margin: 0.3rem 0 0.3rem 0;
+            color: rgba(245, 242, 238, 0.781);
+        }
 
+        #index-ul-header a {
+            color: rgba(245, 242, 238, 0.781);
+        }
 
+        #index-ul-header {
+            display: flex;
+            margin: 0;
+        }
 
-/* Navbar + Header_Layout_end */
+        #index-home-header {
+            display: flex;
+            margin-left: 8rem; 
+        }
 
+        #index-login-header {
+            display: flex;
+            margin-left: 1rem;
+        }
+
+        #index-register-header {
+            margin-left: 1rem;
+        }
+
+        #index-search-header {
+            margin-left: 10rem;
+        }
+
+        #genres-list {
+            display: none;
+            margin: 1rem 0 1rem 0 ;
+            padding: 0;
+        }
+
+        #show-or-hide {
+            text-decoration: none;
+            list-style: none;
+            background-color: rgb(27, 25, 25);
+        }
+
+    /* Header End */
+
+    /* SubMenu Start */
+        #hidden-user-menu {
+            position: fixed;
+            height: 0;
+            width: 0;
+            z-index: 1;
+            top: 0;
+            overflow-y: hidden;
+            transition: 0.4s;
+            background-color: rgb(27, 25, 25);
+            opacity: 1;
+            margin-top: 2.5rem;
+            
+        }
+
+        #hidden-user-menu a {
+            display: block;
+            text-decoration: none;
+            padding: 1rem 0 1rem 0;
+            transition: 0.4;
+            border: 1px solid rgba(245, 242, 238, 0.781);
+        }
+
+        #hidden-user-menu a:hover {
+            background-color: rgb(41, 37, 37);
+        }
+
+        #user-header {
+            display: flex;
+            margin-left: 10rem;
+        }
+
+        #btn-close {
+            color: white;
+            display: flex;
+            justify-content: end;
+            padding-bottom: 15px;
+        }
+    /* SubMenu End */
+/* Header + Submenu End*/
 
 /* index_Main_Star*/
 
@@ -55,6 +141,7 @@ main {
     #flex-anime-transition {
         display: flex;
         justify-content: center;
+        margin-top: 1rem;
     }
 
 
@@ -124,6 +211,7 @@ main {
     }
 
     #anime-select {
+        margin-top: 6rem;
         font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
         margin-left: 32px;
         color: rgba(245, 242, 238, 0.781);
@@ -142,7 +230,7 @@ main {
     }
 
     hr {
-        border: 3px solid rgba(245, 242, 238, 0.781);
+        border: 2px solid rgba(245, 242, 238, 0.781);
         position: relative;
         bottom: 15px;
         left: 30px;
@@ -160,9 +248,8 @@ main {
     }
 
 
-    .animes-list li :hover {
-        border: solid rgb(41, 37, 37);
-        background-color: rgb(41, 37, 37);
+    .animes-list li figure:hover {
+        background-color: rgb(15, 14, 14);
     }
 
     figcaption {
@@ -228,48 +315,10 @@ main {
     }
 
     /* Sub menu */
-    #user-header {
-        display: flex;
-        flex: 0.2 0 0.1rem;
-        
-    }
 
     #ul-flex li a {
         color: rgba(245, 242, 238, 0.781);
         text-decoration: none;
-    }
-
-    #btn-close {
-        color: white;
-        display: flex;
-        justify-content: end;
-        padding-bottom: 15px;
-    }
-
-    #hidden-user-menu {
-        position: fixed;
-        height: 0;
-        width: 0;
-        z-index: 1;
-        top: 0;
-        overflow-y: hidden;
-        transition: 0.4s;
-        background-color: rgb(27, 25, 25);
-        opacity: 1;
-        margin-top: 2.5rem;
-        
-    }
-
-    #hidden-user-menu a {
-        display: block;
-        text-decoration: none;
-        padding: 1rem 0 1rem 0;
-        transition: 0.4;
-        border: 1px solid rgba(245, 242, 238, 0.781);
-    }
-
-    #hidden-user-menu a:hover {
-        background-color: rgb(41, 37, 37);
     }
 
     /* Sub_menu _end_content */
@@ -498,6 +547,11 @@ main {
     #register-a {
         color: orange;
         text-decoration: none;
+    }
+
+    #create-account-register {
+        margin-top: 1rem;
+        padding-top: 1rem;
     }
 
     #create-account-register input {

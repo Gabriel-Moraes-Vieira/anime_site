@@ -2,34 +2,15 @@
 {% load static %}
 {% block content %}
 
-<header>
-    <div id="logo-header-index">
-        <img src="{% static 'img/luffy-logo-header.jpg' %}" alt="Luffy" id="luffy-header"><a href="{% url 'index' %}">Ouni Animes</a><img src="{% static 'img/straw-hat-logo-header.jpg' %}" alt="">
-        <ul id="index-ul-header">
-            <li id="index-home-header">
-                <a href="{% url 'index' %}">Home</a>
-            </li>
-            <li>
-                <a href="{% url 'login' %}">Login</a>
-            </li>
-            <li>
-                <a href="{% url 'cadastro' %}">Cadastro</a>
-            </li>
-            <li>
-                <a href="{% url 'busca' %}"><i class="bi bi-search"></i></a>
-            </li>
-        </ul>
-    </div>
-</header>
 
-<body>
-    <main>
+    <main id="main">
 
         <div class="container" id="flex-anime-transition">
             <a href="" id="back-button-a"><i class="bi bi-arrow-left"></i></i></a>
             <figure class="image-list"><a href=""><img src="{% static 'img/dbz-lista.jpg' %}" alt="DBZ"></a></figure>
             <a href="" id="skip-button-a"><i class="bi bi-arrow-right"></i></i></a>
         </div>
+        <!-- ADIÇÃO FUTURA
         <div class="container"> 
             <div class="flex-container" id="flex-anime-transition-minibox">
                 <div>
@@ -45,24 +26,23 @@
                     <a href=""><p>Demon Slayer</p></a>
                 </div>
             </div>
-        </div>
+        </div> -->
 
      <div class="anime-color">
         <div class="container">
-            <h3>Anime List</h3>
             <p id="anime-select">Escolha o seu anime</p>
             <hr>
             <ul class="animes-list">
                 <li>
                     <figure>
-                        <a href=""><img src="{% static 'img/dbz-imagem.jpg' %}" alt="DEMON SLAYER"></a>
+                        <a href=""><img src="{% static 'img/dbz-imagem.jpg' %}" alt="DBZ"></a>
     
                         <figcaption>Dragon Ball Z</figcaption>
                     </figure>
                 </li>
                 <li>
                     <figure>
-                        <a href=""><img src="{% static 'img/one-piece.jpg' %}" alt="DEMON SLAYER"></a>
+                        <a href=""><img src="{% static 'img/one-piece.jpg' %}" alt="ONE PIECE"></a>
     
                         <figcaption>One Piece</figcaption>
                     </figure>
@@ -76,23 +56,23 @@
                 </li>
                 <li>
                     <figure>
-                        <a href=""><img src="{% static 'img/jojo.png' %}" alt="DEMON SLAYER"></a>
+                        <a href=""><img src="{% static 'img/jojo.png' %}" alt="JOJO`S"></a>
     
                         <figcaption>Jojo`s Bizarre Adventure</figcaption>
                     </figure>
                 </li>
                 <li>
                     <figure>
-                        <a href=""><img src="{% static 'img/bleach.jpg' %}" alt="DEMON SLAYER"></a>
+                        <a href=""><img src="{% static 'img/bleach.jpg' %}" alt="BLEACH"></a>
     
                         <figcaption>Bleach</figcaption>
                     </figure>
                 </li>
                 <li>
                     <figure>
-                        <a href=""><img src="{% static 'img/tensei-shitara.jpg' %}" alt="DEMON SLAYER"></a>
+                        <a href=""><img src="{% static 'img/hunterXhunter.jpe' %}" alt="HXH"></a>
     
-                        <figcaption>Tensei Shitara Slime Datta ken</figcaption>
+                        <figcaption>Hunter X Hunter 2011</figcaption>
                     </figure>
                 </li>
             </ul>

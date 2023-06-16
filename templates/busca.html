@@ -1,4 +1,6 @@
+{% extends 'base.html' %}
 {% load static %}
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,29 +13,6 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
-<header>
-    <div id="header">
-        <ul id="ul-flex">
-            <li id="home-header">
-                <a href=" {% url 'index' %}" >Home</a>
-            </li>
-            <li id="menu-header">
-                <a href="">Navegar</a>
-            </li>
-            <li id="user-header">
-                <div id="user-menu">
-                    <a href="#"><i class="bi bi-caret-down-fill" onclick="AbrirNav()">Usuario</i></a>
-                </div>
-                <div id="hidden-user-menu" class="hidden-user-menu">
-                    <i class="bi bi-x-lg"  id="btn-close" onclick="FecharNav()"></i>
-                    <a href="#">Conta</a>
-                    <a href="#">Logout</a>
-                </div>
-            </li>
-        </ul>
-    </div>
-
-</header>
 
 <body>
     <main id="main-opacity">
@@ -48,6 +27,6 @@
     </main>
     <script src="{% static 'js/scripts.js' %}"></script>
 </body>
-
+{%endblock%}
 
 </html>
