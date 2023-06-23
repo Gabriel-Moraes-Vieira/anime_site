@@ -87,6 +87,12 @@
             background-color: rgb(27, 25, 25);
         }
 
+        @media screen and (max-width: 768px){
+
+
+
+        }
+
     /* Header End */
 
     /* SubMenu Start */
@@ -557,6 +563,74 @@ main {
     #create-account-register input {
         display: flex;
         justify-content: center;
+    }
+
+/* register.html end*/
+
+/* animes.html start */
+
+    #animes-title {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #animes-title h1 {
+        color: rgba(245, 242, 238, 0.781);
+        margin: 1rem 0 1rem 1rem;
+    }
+
+    #animes-title p {
+        color: rgba(245, 242, 238, 0.781);
+        margin: 0 0 0.5rem 1rem;
+    }
+
+    #animes-sinopse {
+        
+        
+    }
+
+    #animes-sinopse P {
+        display: inline-block;
+        color: rgba(245, 242, 238, 0.781);
+        margin: 5rem 0 0 1rem;
+        word-wrap: break-word;
+        max-width: 70ch;
+        margin-right: 25rem;
+    }
+
+    #animes-sinopse img {
+        width: 200px;
+        height: 300px;
+        max-width: 300px;
+        max-height: 300px;
+        margin-top: 7rem;
+    }
+    
+    #animes-img {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: end;
+    }
+
+    @media screen and (max-width: 768px){
+        .container {
+            width: 100%;
+            height: 100%;
+        }
+
+        #animes-sinopse P {
+            word-wrap: break-word;
+            max-width: 45ch;
+        }
+
+    }
+    
+    #animes-links {
+        margin: 10rem 0 5rem 1rem;
+    }
+
+    #animes-written-by {
+        margin: 0 0 5rem 1rem;
     }
 
 /* footer Start*/

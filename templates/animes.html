@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animes</title>
+</head>
+
+
+<body>
+    <div class="container">
+        <div id="animes-title">
+            <h1>NOME DO ANIME</h1>
+            <p>nomes alternativos:</p>
+            <p>tags de gênero:</p>
+        </div>
+        <div id="animes-sinopse">
+            <p>SINOPSE AQUI AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
+            <div id="animes-img">
+                <img src="{% static 'img/demon-slayer-t3.jpg' %}" alt="404">
+                <img src="{% static 'img/demon-slayer-t3.jpg' %}" alt="404">
+                <img src="{% static 'img/demon-slayer-t3.jpg' %}" alt="404">
+            </div>
+        </div>
+        <div id="animes-links">
+            <h2>Quer assistir?</h2>
+            <p>crunchyroll, goyabu, anitube</p>
+        </div>
+        <div id="animes-written-by">
+            <h2>Escrita por</h2>
+            <p>NOME DO USUARIO</p>
+        </div>
+    </div>
+
+    
+    {% include 'partials/_footer.html' %}
+
+</body>
+
+
+
+{%endblock%}
+
+</html>
