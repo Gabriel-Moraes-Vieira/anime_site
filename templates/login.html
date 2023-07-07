@@ -19,25 +19,26 @@
 
 <body>
     <main>
-        <div id="box">
-            <div id="login-menu">
-                <form action="#" method="POST"></form>
-                {% csrf_token %}
-                <h1>Login</h1>
-                <hr id="login-hr">
-                <p>
-                <label for="nome_login">Seu nome</label>
-                <input type="text" name="nome-login" id="nome_login" required="required" placeholder="Exemplo... Gabriel"> 
-                </p>
-                <p>
-                    <label for="senha">Senha</label>
-                    <input type="password" name="senha" id="senha" required="required" placeholder="Exemplo... 1234">
-                </p>
-                <p id="login-btn-p">
-                    <input type="submit" value="Logar" onclick="exibirCriarConta">
-                </p>
-                <p>Ainda não possui cadastro?<a href="{% url 'cadastro' %}" id="redirect-login-a">Clique aqui</a></p>
-            </div>
+        <form id="box">
+            <form action="{% url 'login' %}" method="POST">
+                <div id="login-menu">
+                    {% csrf_token %}
+                    <h1>Login</h1>
+                    <hr id="login-hr">
+                    <p>
+                    <label for="nome">Seu nome</label>
+                    <input type="text" name="nome" id="nome" required="required" placeholder="Exemplo... Gabriel"> 
+                    </p>
+                    <p>
+                        <label for="senha">Senha</label>
+                        <input type="password" name="senha" id="senha" required="required" placeholder="Exemplo... 1234">
+                    </p>
+                    <p id="login-btn-p">
+                        <button type="submit" class="btn btn success">Logar</button>
+                    </p>
+                    <p>Ainda não possui cadastro?<a href="{% url 'cadastro' %}" id="redirect-login-a">Clique aqui</a></p>
+                </div>
+            </form>
         </div>
     </main>
 

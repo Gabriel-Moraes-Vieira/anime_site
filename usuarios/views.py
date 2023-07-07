@@ -5,25 +5,29 @@ from animes.models import Animes
 from django.contrib.auth import authenticate
 
 def cadastro(request):
-    if request.method == 'POST':
+    if request.method == "POST":
         email = request.POST['email']
         nome = request.POST['nome']
         senha1 = request.POST['senha1']
         senha2 = request.POST['senha2']
         if campo_vazio(email):
-            messages.error(request, 'O campo email não pode ficar em branco')
+            messages.warning(request, 'O campo email não pode ficar em branco')
             return redirect ('cadastro')
         if campo_vazio(nome):
-            messages.error(request, 'O campo nome não pode ficar em branco')
+            messages.warning(request, 'O campo nome não pode ficar em branco')
             return redirect('cadastro')
         if senhas_diferentes(senha1, senha2):
-            messages.error(request, 'As senhas precisam ser iguais')
+            messages.warning(request, 'As senhas precisam ser iguais')
+            return redirect('cadastro')
         if User.objects.filter(email=email).exists():
-            messages.error(request, 'Este email já existe')
-        if User.objects.filter(name=nome).exists():
-            messages.error(request, 'Nome já cadastrado')
+            messages.warning(request, 'Este email já existe')
+            return redirect('cadastro')
+        if User.objects.filter(username=nome).exists():
+            messages.warning(request, 'Nome já cadastrado')
+            return redirect('cadastro')
         user = User.objects.create_user(email=email, username=nome, password=senha1)
         user.save()
+        print(email, nome, senha1, senha2)
         messages.success(request, 'Usuario criado com sucesso')
         return redirect('login')
     else:
@@ -32,8 +36,25 @@ def cadastro(request):
         
 
 def login(request):
-    return render(request, 'login.html')
+    if request.method == "POST":
+        nome = request.POST['nome']
+        senha = request.POST['senha']
+        if campo_vazio(nome):
+            messages.warning(request, 'Preencha o campo email')
+        if campo_vazio(senha):
+            messages.warning(request, 'Preencha o campo senha')
+        user = authenticate(request, username=nome, password=senha)
+        if user is not None:
+            login(request, user)
+            print('usuaria logado com sucesso')
+            return redirect('cadastro')
+    else:
+        return render(request, 'login.html')
 
+
+def logout(request):
+    auth.logout(request)
+    return redirect('index')
 
 def campo_vazio(campo):
     return not campo

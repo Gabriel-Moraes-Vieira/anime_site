@@ -20,15 +20,15 @@
 <body>
     <main>
         <div id="box">
-            <div id="register-menu">
-                <form action="{% url 'cadastro' %}" method="POST"></form>
-                    {% csrf_token %}
-                    {% include 'partials/_alertas.html' %}
+            <form action="{% url 'cadastro' %}" method="POST">
+                {% csrf_token %}
+                {% include 'partials/_alertas.html' %}
+                <div id="register-menu">
                     <h1>Cadastro</h1>
                     <hr id="register-hr">
                     <p>
-                    <label for="email">Email</label>
-                    <input type="text" name="email" id="email" required="required" placeholder="Exemplo... exemplo@gmail.com"> 
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" required="required" placeholder="Exemplo... exemplo@gmail.com"> 
                     </p>
                     <p>
                         <label for="nome">Nome</label>
@@ -43,21 +43,16 @@
                         <input type="password" name="senha2" id="senha2" required="required" placeholder="Exemplo... 1234">
                     </p>
                     <p id="create-account-register">
-                        <input type="submit" value="CRIAR CONTA" onclick="exibirCriarConta">
+                        <button type="submit" class="btn btn success">CRIAR CONTA</button>
                     </p>
                     <P>Já possui uma conta? <a href="{% url 'login' %}" id="register-a">ENTRAR</a></P>
-            </div>
+                </div>
+            </form>
         </div>
-    </main>
+    </main> 
 
 
     {% include 'partials/_footer.html'%}
-<script>
-    function exibirCriarConta()
-    {
-        location.href = "{% url 'cadastro' %}";
-    } 
-</script>
         
 </body>
 </html>

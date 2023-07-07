@@ -431,6 +431,18 @@ main {
         background-color: rgb(27, 25, 25);
     }
 
+    #login-menu button {
+        display: flex;
+        justify-content: center;
+        margin: 0 0 0 1rem;
+        width: 20rem;
+        border-radius: 5px;
+        background-color: rgb(41, 37, 37);
+        text-decoration: none;
+        color: rgba(245, 242, 238, 0.781);
+        
+    }
+
     #redirect-login-a {
         margin: 0 0 0 0.5rem;
         text-decoration: none;
@@ -528,6 +540,17 @@ main {
         background-color: rgb(27, 25, 25);
     }
 
+    #register-menu button {
+        display: flex;
+        justify-content: center;
+        margin: 0 0 0 1rem;
+        width: 20rem;
+        border-radius: 5px;
+        background-color: rgb(41, 37, 37);
+        text-decoration: none;
+        color: rgba(245, 242, 238, 0.781);
+        
+    }
 
     input::placeholder {
         color: rgba(245, 242, 238, 0.781);
@@ -631,6 +654,15 @@ main {
 
     #animes-written-by {
         margin: 0 0 5rem 1rem;
+    }
+
+/* animes.html end */
+
+    #user-log {
+        color: rgba(245, 242, 238, 0.781);
+        text-align: center;
+        margin-top: 2rem;
+        font-size: 2rem;
     }
 
 /* footer Start*/
