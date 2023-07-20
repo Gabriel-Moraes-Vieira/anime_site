@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <body>
+        <main>
+            <div id="cria_anime">
+                <form action="{% url 'cria_anime' %}" method="POST">
+                    {% csrf_token %}
+                    <div id="cria_anime_div_h1">
+                        <h1>TODOS OS CAMPOS SÃO OBRIGATÓRIOS</h1>
+                    </div>
+                    <div class="cria_anime_div">
+                        <label for="nome_anime"></label>
+                        <input type="text" name="nome_anime" id="nome_anime" placeholder="Nome do anime" required>
+                    </div>
+                    <div class="cria_anime_div">
+                        <label for="nomes_alternativos"></label>
+                        <input type="text" name="nomes_alternativos" id="nomes_alternativos" placeholder="Nomes alternativos" required  autofocus="true">
+                    </div>
+                    <div class="cria_anime_div"> 
+                        <label for="tags_genero"></label>
+                        <input type="text" name="tags_genero" id="tags_genero" placeholder="Gêneros do anime" required>
+                    </div>
+                    <div id="cria_anime_div_sinopse">
+                        <label for="anime_sinopse"></label>
+                        <textarea name="animes_sinopse" id="animes_sinopse" placeholder="sinopse" required ></textarea>
+                    </div>
+                    <div class="cria_anime_div">
+                        <label for="links"></label>
+                        <input type="url" name="links" id="links" placeholder="Links" required>
+                    </div>
+                    <div class="cria_anime_div">
+                        <label for="imagem_anime"></label>
+                        <input type="file" name="imagem_anime" id="imagem_anime" placeholder="Imagem do anime" required>
+                    </div>
+                    <div class="cria_anime_div">
+                        <label for="enviar"></label>
+                        <button >Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+
+    </body>
+    {% include 'partials/_footer.html' %}
+{% endblock %}

@@ -43,11 +43,11 @@ def login(request):
             messages.warning(request, 'Preencha o campo email')
         if campo_vazio(senha):
             messages.warning(request, 'Preencha o campo senha')
-        user = authenticate(request, username=nome, password=senha)
+        user = auth.authenticate(request, username=nome, password=senha)
         if user is not None:
-            login(request, user)
-            print('usuaria logado com sucesso')
-            return redirect('cadastro')
+            auth.login(request, user)
+            print('usuario logado com sucesso')
+            return redirect('index')
     else:
         return render(request, 'login.html')
 
