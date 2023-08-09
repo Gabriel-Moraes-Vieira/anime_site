@@ -18,12 +18,12 @@ def index(request):
 def busca(request):
     return render(request, 'busca.html')
 
-def animes(request, animes_id):
-    animes = get_object_or_404(Animes, pk=animes_id)
-    animes = Animes.objects.order_by('-data_anime')
+def anime(request, anime_id):
+    anime = get_object_or_404(Animes, pk=anime_id)
+    
 
     dados = {
-        'animes': animes
+        'anime': anime
     }
 
     return render(request, 'animes.html', dados)
@@ -35,7 +35,7 @@ def cria_anime(request):
         tags_genero = request.POST['tags_genero']
         anime_sinopse = request.POST['animes_sinopse']
         links = request.POST['links']
-        imagem_anime = request.POST['imagem_anime']
+        imagem_anime = request.FILES['imagem_anime']
         user = get_object_or_404(User, pk=request.user.id)
         anime = Animes.objects.create(pessoa=user ,nome_anime=nome_anime, nomes_alternativos=nomes_alternativos, tags_genero=tags_genero, anime_sinopse=anime_sinopse, links=links, imagem_anime=imagem_anime)
         print(nome_anime, nomes_alternativos, tags_genero, anime_sinopse, links, imagem_anime)
@@ -44,3 +44,15 @@ def cria_anime(request):
     return render(request, 'cria_anime.html')
 
 
+def my_animes(request):
+    if request.user.is_authenticated:
+        id = request.user.id
+        animes = Animes.objects.filter(pessoa=id)
+        
+
+    animes = {
+        'animes':animes
+    }
+
+    return render(request, 'my_animes.html', animes)
+    

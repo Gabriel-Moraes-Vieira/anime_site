@@ -4,6 +4,7 @@ from . import views
 urlpatterns = [
     path('', views.index, name='index'),
     path('busca', views.busca, name='busca'),
-    path('animes/<int:animes_id>', views.animes, name='animes'),
-    path('cria_anime', views.cria_anime, name='cria_anime')
+    path('<int:anime_id>', views.anime, name='anime'),
+    path('cria_anime', views.cria_anime, name='cria_anime'),
+    path('my_animes/', views.my_animes, name='my_animes')
 ]

@@ -52,9 +52,13 @@
                         <a href="{% url 'cria_anime' %}">Criar Sinopse</a>
                     </li>
 
-                    <li id="index-dashboard-header">
-                        <a href="">Meus animes</a>
-                    </li>
+                    {% if animes %}
+                        
+                            <li id="index-dashboard-header">
+                                <a href="{% url 'my_animes'  %}">Meus animes</a>
+                            </li>
+                        
+                    {% endif %}
                 {% endif %}
                     
                 <li id="index-search-header">

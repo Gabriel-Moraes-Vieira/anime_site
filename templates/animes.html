@@ -1,38 +1,29 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animes</title>
-</head>
 
 
 <body>
     <div class="container">
         <div id="animes-title">
             
-            <h1>NOME DO ANIME</h1>
-            <p>nomes alternativos:</p>
-            <p>tags de gênero:</p>
+            <h1>{{ anime.nome_anime }}</h1>
+            <p>Nomes alternativos: {{ anime.nomes_alternativos }}</p>
+            <p>Tags de gênero: {{ anime.tags_genero }}</p>
         </div>
         <div id="animes-sinopse">
-            <p></p>
+            <p>{{ anime.anime_sinopse }}</p>
             <div id="animes-img">
-                <img src="{% static 'img/demon-slayer-t3.jpg' %}" alt="404">
-                <img src="{% static 'img/demon-slayer-t3.jpg' %}" alt="404">
-                <img src="{% static 'img/demon-slayer-t3.jpg' %}" alt="404">
+                <img src="{{ anime.imagem_anime.url }}" alt="404">
             </div>
         </div>
         <div id="animes-links">
             <h2>Quer assistir?</h2>
-            <p>crunchyroll, goyabu, anitube</p>
+            <a href="{{ anime.links }}">{{ anime.links }}</a>
         </div>
         <div id="animes-written-by">
-            <h2>Escrita por</h2>
-            <p>NOME DO USUARIO</p>
+            <h2>Escrita por:</h2>
+            <p>{{ anime.pessoa }}</p>
         </div>
     </div>
 
@@ -45,4 +36,3 @@
 
 {%endblock%}
 
-</html>

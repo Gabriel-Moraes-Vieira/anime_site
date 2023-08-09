@@ -36,50 +36,18 @@
             <p id="anime-select">Escolha o seu anime</p>
             <hr>
             {% if animes %}
+            {% for anime in animes %}
             <ul class="animes-list">
                 <li>
                     <figure>
-                        <a href="{% url 'animes' animes_id %}"><img src="{% static 'img/dbz-imagem.jpg' %}" alt="DBZ"></a>
-    
-                        <figcaption>Dragon Ball Z</figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <a href="{% url 'animes' animes_id %}"><img src="{% static 'img/one-piece.jpg' %}" alt="ONE PIECE"></a>
-    
-                        <figcaption>One Piece</figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <a href="{% url 'animes' animes_id %}"><img src="{% static 'img/demon-slayer.jpg' %}" alt="DEMON SLAYER"></a>
-    
-                        <figcaption>Demon Slayer</figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <a href="{% url 'animes' animes_id %}"><img src="{% static 'img/jojo.png' %}" alt="JOJO`S"></a>
-    
-                        <figcaption>Jojo`s Bizarre Adventure</figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <a href="{% url 'animes' animes_id %}"><img src="{% static 'img/bleach.jpg' %}" alt="BLEACH"></a>
-    
-                        <figcaption>Bleach</figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <a href="{% url 'animes' animes_id %}"><img src="{% static 'img/hunterXhunter.jpe' %}" alt="HXH"></a>
-    
-                        <figcaption>Hunter X Hunter 2011</figcaption>
+                    {% if anime.imagem_anime %}
+                        <a href="{% url 'anime' anime.id %}"><img src="{{ anime.imagem_anime.url }}" alt="404"></a>
+                    {% endif %}
+                        <figcaption>{{ anime.nome_anime }}</figcaption>
                     </figure>
                 </li>
             </ul>
+            {% endfor %}
             {% endif %}
         </div>
     </div>

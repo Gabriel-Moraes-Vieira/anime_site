@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<body>
+
+    <div class="container">
+        <h1 id="my-animes-h1">Aqui estão os seus animes</h1>
+        {% if animes %}
+            {% for anime in animes %}
+                <ul id="my-animes-ul">
+                    <li>
+                        <img src="{{ anime.imagem_anime.url }}" alt="404" id="my-animes-img">
+                        <p id="my-animes-nome">{{ anime.nome_anime }}</p>
+                        <div id="my-animes-btn">
+                            <button type="button" class="btn btn-danger">Deletar</button>
+                            <button  type="button" id="button" class="btn btn-info">Editar</button>
+                        </div>
+                    
+                    </li>
+                </ul>
+            {% endfor %}
+        {% endif %}
+     </div>
+             
+</body>
+
+{% endblock %}

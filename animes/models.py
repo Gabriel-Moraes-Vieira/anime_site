@@ -17,3 +17,4 @@ class Animes(models.Model):
     publicada = models.BooleanField(default=False)
     def __str__(self):
         return self.nome_anime
+    
