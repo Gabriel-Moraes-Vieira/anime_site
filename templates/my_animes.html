@@ -13,8 +13,8 @@
                         <img src="{{ anime.imagem_anime.url }}" alt="404" id="my-animes-img">
                         <p id="my-animes-nome">{{ anime.nome_anime }}</p>
                         <div id="my-animes-btn">
-                            <button type="button" class="btn btn-danger">Deletar</button>
-                            <button  type="button" id="button" class="btn btn-info">Editar</button>
+                            <a href="{% url 'delete_anime' anime.id %}"><button type="button" class="btn btn-danger">Deletar</button></a>
+                            <a href="?"><button  type="button" id="button" class="btn btn-info">Editar</button></a>
                         </div>
                     
                     </li>

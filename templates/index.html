@@ -5,7 +5,7 @@
 
     <main id="main">
         {% if request.user.is_authenticated %}
-            <p id="user-log">Olá {{ request.user.username }}</p>
+            <p id="user-log">Olá, {{ request.user.username }}</p>
         {% endif %}
         <div class="container" id="flex-anime-transition">
             <a href="" id="back-button-a"><i class="bi bi-arrow-left"></i></i></a>

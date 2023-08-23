@@ -14,7 +14,7 @@ class Animes(models.Model):
     links =  models.URLField(max_length=255)
     data_anime = models.DateTimeField(default=datetime.now, blank=True)
     lancamentos = models.BooleanField(default=False)
-    publicada = models.BooleanField(default=False)
+    publicada = models.BooleanField(default=True)
     def __str__(self):
         return self.nome_anime
     

@@ -46,10 +46,12 @@ def login(request):
         user = auth.authenticate(request, username=nome, password=senha)
         if user is not None:
             auth.login(request, user)
-            print('usuario logado com sucesso')
+            messages.success(request, 'usuario logado com sucesso')
             return redirect('index')
-    else:
-        return render(request, 'login.html')
+        else:
+            messages.warning(request, 'usuario ou senha incorreta')
+    return render(request, 'login.html')
+        
 
 
 def logout(request):

@@ -18,9 +18,14 @@
     <main id="main-opacity">
         <div id="search-content">
             <div id="search-field">
-                <div id="search-input">
-                    <input type="text" placeholder="Buscar..." id="input-btn">
-                </div>
+                    <form action="{% url 'buscar' %}" method="GET" id="search-input">
+                        <input type="text" placeholder="Buscar..." id="input-btn" name="buscar">
+                    </form>
+            </div>
+            <div id="get-content">
+                {% for anime in animes %}
+                <a href="{% url 'anime' anime.id %}">{{ anime.nome_anime }}<img src="{{ anime.imagem_anime.url }}" alt=""></a>
+                {% endfor %}
             </div>
         </div>
         {% include 'partials/_footer.html' %}
