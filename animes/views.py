@@ -5,6 +5,7 @@ from animes.models import Animes
 from django.contrib.auth import authenticate
 from django.db.models import Q
 from django.core.paginator import Paginator
+from django.core.paginator import PageNotAnInteger, EmptyPage
 
 def index(request):
 
@@ -14,13 +15,25 @@ def index(request):
     """ quantidade de itens por pagina """
     parametro_limit = request.GET.get('limit', '8') 
 
+    """ se ele não for um digito e for maior do que 0, ele irá atender ao paranetro_limit como 8 itens por página """
+    if not (parametro_limit.isdigit() and int(parametro_limit) > 0 ):
+        parametro_limit = '8'
+
+
     animes = Animes.objects.order_by('-data_anime').filter(publicada=True)
 
     animes_paginacao = Paginator(animes, parametro_limit)
 
-    page = animes_paginacao.page(parametro_page)
+
+    """ caso o numero digitado para a página seja maior do que o número de páginas ou diferente de um número
+    , seremos redirecionados para a página 1"""
+    try:
+        page = animes_paginacao.page(parametro_page)
+    except (EmptyPage, PageNotAnInteger):
+        page = animes_paginacao.page(1)
 
     animes_a_exibir = {
+        'quantidade_por_pagina': ['8', '16', '24', '32'],
         'animes': page
     }
 
@@ -28,17 +41,35 @@ def index(request):
 
 
 def buscar(request):
+    parametro_page = request.GET.get('page', '1')
+    parametro_limit = request.GET.get('limit', '7')
+
+    if not (parametro_limit.isdigit() and int(parametro_limit) > 0):
+        parametro_limit = '7'
+
     animes_a_buscar = Animes.objects.filter(publicada=True)
+
+    animes_a_buscar_pag = Paginator(animes_a_buscar, parametro_limit)
+
+    try:
+        page = animes_a_buscar_pag.page(parametro_page)
+    except (EmptyPage, PageNotAnInteger):
+        page = animes_a_buscar_pag.page(1)
     
+    
+    anime_a_buscar = Animes.objects.filter(publicada=True)
+
     if 'buscar' in request.GET:
         nome_a_buscar = request.GET['buscar']
-        animes_a_buscar = animes_a_buscar.filter(Q(nome_anime__icontains=nome_a_buscar))
+        anime_a_buscar = anime_a_buscar.filter(Q(nome_anime__icontains=nome_a_buscar))
     else:
-        animes_a_buscar = Animes.objects.all()
+        None
+
         
 
     contexto = {
-        'animes': animes_a_buscar
+        'animes':page, 
+        'animes':anime_a_buscar
     }
 
     return render(request, 'busca.html', contexto)
@@ -85,3 +116,8 @@ def delete_anime(request, anime_id):
     anime_a_deletar.delete()
     return redirect('my_animes')
 
+def conta(request, user_id):
+    if request.user.is_authenticated:
+        id = request.user.id
+
+    return render(request, 'conta.html')

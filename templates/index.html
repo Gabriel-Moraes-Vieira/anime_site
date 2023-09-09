@@ -7,11 +7,6 @@
         {% if request.user.is_authenticated %}
             <p id="user-log">Olá, {{ request.user.username }}</p>
         {% endif %}
-        <div class="container" id="flex-anime-transition">
-            <a href="" id="back-button-a"><i class="bi bi-arrow-left"></i></i></a>
-            <figure class="image-list"><a href=""><img src="{% static 'img/dbz-lista.jpg' %}" alt="DBZ"></a></figure>
-            <a href="" id="skip-button-a"><i class="bi bi-arrow-right"></i></i></a>
-        </div>
         <!-- ADIÇÃO FUTURA
         <div class="container"> 
             <div class="flex-container" id="flex-anime-transition-minibox">
@@ -35,6 +30,80 @@
         <div class="container">
             <p id="anime-select">Escolha o seu anime</p>
             <hr>
+            
+            
+
+
+            <!-- Paginação -->
+            <div class="pagination-index">
+                <nav>
+                    <ul class="pagination">
+                        <!-- Se tivermos uma página anterior, ela sera habilitada e aparecerá o número anterior dela -->
+                        {% if animes.has_previous %}                                                                                   
+                    <li class="page-item">
+                        <a class="page-link" href="{% url 'index' %}?limit={{ paginator.per_page }}&page={{ animes.previous_page_number }}" tabindex="-1">Anterior</a>
+                    </li>
+                    <!-- Se não tivermos uma página anterior, ela sera desabilitada e não aparecerá o número anterior dela -->
+                    {% else %}
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">Anterior</a>
+                    </li>
+                    {% endif %}
+
+
+                    <!-- aqui pegamos para cada pagina no range (número) de páginas e aplicamos o seguinte -->
+                    {% for page in animes.paginator.page_range %}
+                        <!-- se a página em que estivermos estiver ativa, ela será marcada como a página atual -->
+                        {% if page == animes.number %}
+                            <li class="page-item active">
+                                <a class="page-link" href="#">{{ page }}</a>
+                            </li>
+                        <!-- se ele não estiver ativo, o usuário pode ir para a próxima página/link -->
+                        {% else %}
+                            <li class="page-item">
+                                <a class="page-link" href="{% url 'index' %}?limit={{ paginator.per_page }}&page={{ page }}">{{ page }}</a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+
+                    
+                    <!-- Se tivermos uma próxima página, ela sera habilitada e aparecerá o número da página seguinte -->
+                    {% if animes.has_next %}
+                        <li class="page-item">
+                            <a class="page-link" href="{% url 'index' %}?limit={{ paginator.per_page }}&page={{ animes.next_page_number }}">Próximo</a>
+                        </li>
+
+                    <!-- Se não tivermos uma próxima página, ela sera desabilitada e não aparecerá o número da página seguinte -->
+                    {% else %}
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#">Próximo</a>
+                        </li>
+                    {% endif %}
+                    </ul>
+                </nav>
+            </div>
+
+            <div>
+                <nav>
+                    <ul class="pagination pagination-sm">
+                        {% for quantidade in quantidade_por_pagina %}
+                            {% if quantidade == paginator.per_page %}
+                            <li class="page-item active">
+                                <a class="page-link" href="#">{{ quantidade }}</a>
+                            </li>
+
+                            {% else %}
+                            <li class="page-item">
+                                <a class="page-link" href="{% url 'index' %}?limit={{ quantidade }}">{{ quantidade }}</a>
+                            </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+
+            <br>
+
             {% if animes %}
             {% for anime in animes %}
             <ul class="animes-list">
@@ -49,8 +118,36 @@
             </ul>
             {% endfor %}
             {% endif %}
+            <div>
+            <!-- Fim da paginação-->
+                  
+                 <!-- ASSIM É A VERSÃO ANTES DE APLICAR O PAGINATOR DA FORMA CORRETA COMO APLICADO ACIMA
+                <nav aria-label="...">
+                    <ul class="pagination">
+                      <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item active">
+                        <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                      </li>
+                    </ul>
+                </nav> -->
+
+            </div>
         </div>
     </div>
+
+    <div class="container" id="flex-anime-transition">
+        <a href="" id="back-button-a"><i class="bi bi-arrow-left"></i></i></a>
+        <figure class="image-list"><a href=""><img src="{% static 'img/dbz-lista.jpg' %}" alt="DBZ"></a></figure>
+        <a href="" id="skip-button-a"><i class="bi bi-arrow-right"></i></i></a>
+    </div>
+    
     <div class="container">
         <h4>Lançamentos</h4>
         <p id="text-releases">fique por dentro dos lançamentos</p>

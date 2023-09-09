@@ -140,9 +140,13 @@
         #btn-close {
             color: white;
             display: flex;
-            justify-content: end;
             padding-bottom: 15px;
         }
+
+        #btn-close:hover {
+            background-color: red;
+        }
+        
     /* SubMenu End */
 /* Header + Submenu End*/
 
@@ -356,6 +360,7 @@ main {
     #get-content {
         display: block;
         text-align: center;
+        background-color: black;
     }
 
     #get-content img {
@@ -838,6 +843,12 @@ main {
 
 /* my_animes.html end */
 
+
+    .pagination {
+        justify-content: center;
+    }
+
+    
 
 /* footer Start*/
     .footer {
